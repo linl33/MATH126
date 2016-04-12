@@ -9,12 +9,8 @@ date_format: "%b %-d, %Y"
 
 # Optional features
 animated:             false
-show_related_posts:   false
-show_post_footers:    false
-show_social_icons:    false
-ajaxify_contact_form: false
-enable_mathjax:       false
-extended_fonts:       false
+enable_mathjax:       true
+extended_fonts:       true
 enable_anchorjs:      false
 
 text:
@@ -23,8 +19,6 @@ text:
     older: 'Older'
   post:
     updated:        'Updated'
-    minute_read:    'minute read'
-    related_posts:  'Related Posts'
   index:
     coming_soon: 'Coming soon...'
   og_locale: 'en_US'
