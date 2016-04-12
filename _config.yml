@@ -35,4 +35,4 @@ gems:
   - jekyll-coffeescript
 # https://github.com/jekyll/jekyll/issues/2938
 exclude: [vendor]
-highlighter: rogue
+highlighter: rouge
