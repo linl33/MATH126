@@ -12,6 +12,7 @@ animated:             false
 enable_mathjax:       true
 extended_fonts:       true
 enable_anchorjs:      false
+mathjs:               true
 
 text:
   pagination:
