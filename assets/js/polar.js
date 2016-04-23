@@ -175,6 +175,8 @@ $("#plot-btn").click(function () {
 $("#plot-clear").click(function () {
     ctx.clearRect(0, 0, cWidth, cHeight);
     plotMsg.text("");
+    $("#plot-var").val("");
+    $("#plot-eqn").val("");
 });
 
 // EXAMPLES
