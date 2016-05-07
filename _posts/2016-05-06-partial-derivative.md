@@ -25,7 +25,7 @@ A digital image is composed of a grid of pixels, which usually has 3 components 
 usually has value between 0 and 255. So the image can be described using a function that takes the row and column of a
 pixel and return the components of the pixel.
 
-$$f = f(x, y) = \{red, green, blue\}$$
+$$f = f(x, y) = <red, green, blue>$$
 
 ## The algorithm
 1. Calculate the change in color of each pixel with respect to both $$x$$ and $$y$$ directions. This is referred to as
@@ -51,6 +51,9 @@ the "energy" function by authors of the algorithm.
     can be used to further improve or achieve other effects. For example, we can give the energy function a threshold
     so that the pixel with average energy appear to have the least energy.
 
+    It fascinates me how a function composed of a few simple partial derivatives can play such an important role in this
+    game-changing algorithm.
+
 2. Find the seams. Now we know which pixels are the least different comparing to their neighbors (the pixels with
 the lowest $$E$$), we can define importance as how much energy the pixel has. A seam is a 1 pixel wide horizontal or
 vertical path across the image. The seams can easily be found using shortest path algorithms (e.g. A* search algorithm).
@@ -58,7 +61,7 @@ The number of seams depends on how much the image is to be scaled.
 
 3. Remove or duplicate seams. The seams are the least important parts of the image, so changes to those parts are the
 least likely to be noticed by human eyes. So to scale up an image, duplicate all the seams. To scale down an image,
-remove all the seams.
+remove all the seams. (Or to remove certain regions, scale down then scale up but special energy function is required.)
 
 ## Variants of seam carving
 As discussed in the previous section, other energy functions can be swapped in to tune the algorithm. This is a very
